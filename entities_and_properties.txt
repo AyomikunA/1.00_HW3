@@ -1,0 +1,94 @@
+Questions 1 - 3
+
+Question 1: Create a list of the entities and properties of the book industry?
+
+List of Entities:
+Authors
+Editors
+Publishers
+Books
+Customers
+Orders
+BookAuthors
+BookEditors
+OrderDetails
+
+
+List of properties for each entity:
+Properties of "Authors":
+AuthorID (PK)
+FirstName
+LastName
+Country
+
+Properties of "Editors":
+EditorID (PK)
+EditorName
+City
+State
+
+Properties of "Publishers":
+PublisherID (PK)
+PublisherName
+City
+Region
+Country
+
+
+Properties of "Books":
+BookID (PK)
+BookTitle
+Genre
+PublisherID (FK)
+PublicationYear
+Price
+
+Properties of "Customers":
+CustomerID  (PK)
+CustomerName
+
+Properties of "Orders":
+OrderID (PK)
+CustomerID (FK)
+
+Properties of "BookAuthors":
+BookID AuthorID (PK)
+BookID (FK)
+AuthorID (FK)
+Royalty
+
+Properties of "BookEditors":
+BookID EditorID (PK)
+BookID (FK)
+EditorID (FK)
+
+Properties of "OrderDetails":
+OrderID BookID (PK)
+OrderID (FK)
+BookID (FK)
+Quantity
+OrderDate
+
+
+Question 2: Create a list of the unique identifiers – primary keys.
+AuthorID
+EditorID
+PublisherID
+BookID
+CustomerID
+OrderID
+BookID AuthorID 
+BookID EditorID
+OrderID BookID
+
+
+Question 3: Create a list of the table relationships – the cardinality between entities.
+
+List of Table Relationships:
+Authors, Books, N:N
+Publishers, Books, 1:N
+Editors, Books, N:N
+Orders, Books, N:N
+Customers, Orders, 1:N
+OrderDetails, Orders 1:N
+OrderDetails, Books 1:N
